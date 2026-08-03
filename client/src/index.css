@@ -1,1 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yanone+Kaffeesatz:wght@200..700&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-display: "Yanone Kaffeesatz", sans-serif;
+
+  --color-cool-sky-50: #e7f4fd;
+  --color-cool-sky-100: #d0eafb;
+  --color-cool-sky-200: #a1d5f7;
+  --color-cool-sky-300: #71c0f4;
+  --color-cool-sky-400: #42aaf0;
+  --color-cool-sky-500: #1395ec;
+  --color-cool-sky-600: #0f77bd;
+  --color-cool-sky-700: #0b5a8e;
+  --color-cool-sky-800: #083c5e;
+  --color-cool-sky-900: #041e2f;
+  --color-cool-sky-950: #031521;
+
+  --color-ash-brown-50: #f5f2f0;
+  --color-ash-brown-100: #eae4e1;
+  --color-ash-brown-200: #d6c9c2;
+  --color-ash-brown-300: #c1afa4;
+  --color-ash-brown-400: #ac9486;
+  --color-ash-brown-500: #987967;
+  --color-ash-brown-600: #796153;
+  --color-ash-brown-700: #5b493e;
+  --color-ash-brown-800: #3d3029;
+  --color-ash-brown-900: #1e1815;
+  --color-ash-brown-950: #15110e;
+
+  --color-cool-steel-50: #eff2f5;
+  --color-cool-steel-100: #e0e4eb;
+  --color-cool-steel-200: #c0c9d8;
+  --color-cool-steel-300: #a1aec4;
+  --color-cool-steel-400: #8294b0;
+  --color-cool-steel-500: #62799d;
+  --color-cool-steel-600: #4f617d;
+  --color-cool-steel-700: #3b485e;
+  --color-cool-steel-800: #27303f;
+  --color-cool-steel-900: #14181f;
+  --color-cool-steel-950: #0e1116;
+
+  --color-pale-sky-50: #eff4f6;
+  --color-pale-sky-100: #dfe9ec;
+  --color-pale-sky-200: #bed3da;
+  --color-pale-sky-300: #9ebec7;
+  --color-pale-sky-400: #7da8b5;
+  --color-pale-sky-500: #5d92a2;
+  --color-pale-sky-600: #4a7582;
+  --color-pale-sky-700: #385861;
+  --color-pale-sky-800: #253a41;
+  --color-pale-sky-900: #131d20;
+  --color-pale-sky-950: #0d1417;
+}
