@@ -6,7 +6,7 @@ export const CartPage: React.FC = () => {
     useCart();
   const navigate = useNavigate();
 
-  const ESTIMATED_TAX = totalPrice * 0.05; // 5% GST tax calculation example
+  const ESTIMATED_TAX = totalPrice * 0.05;
   const GRAND_TOTAL = totalPrice + ESTIMATED_TAX;
 
   if (cart.length === 0) {
