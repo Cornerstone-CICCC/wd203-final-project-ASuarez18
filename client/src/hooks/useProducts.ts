@@ -1,4 +1,3 @@
-// src/hooks/useProducts.ts
 import { useState, useEffect } from "react";
 import type { Product, ProductsJsonResponse } from "../types";
 
