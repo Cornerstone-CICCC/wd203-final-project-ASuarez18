@@ -41,7 +41,7 @@ const SidebarCart: React.FC = () => {
             </div>
             <button
               onClick={() => setIsSidebarOpen(false)}
-              className="p-1.5 rounded-lg text-ash-brown-300 hover:text-white hover:bg-ash-brown-850 transition-colors focus:outline-none focus:ring-2 focus:ring-cool-sky-400"
+              className="p-1.5 rounded-lg text-ash-brown-300 cursor-pointer hover:text-white hover:bg-ash-brown-850 transition-colors focus:outline-none focus:ring-2 focus:ring-cool-sky-400"
               aria-label="Close cart overview"
             >
               <svg
@@ -70,7 +70,7 @@ const SidebarCart: React.FC = () => {
                 </p>
                 <button
                   onClick={() => setIsSidebarOpen(false)}
-                  className="mt-2 inline-block px-4 py-2 bg-ash-brown-800 text-ash-brown-50 text-sm font-semibold rounded-lg hover:bg-ash-brown-900 transition-colors"
+                  className="mt-2 inline-block px-4 py-2 cursor-pointer bg-ash-brown-800 text-ash-brown-50 text-sm font-semibold rounded-lg hover:bg-ash-brown-900 transition-colors"
                 >
                   Browse Menu
                 </button>
@@ -101,7 +101,7 @@ const SidebarCart: React.FC = () => {
                     <div className="flex items-center gap-2 mt-2">
                       <button
                         onClick={() => updateQuantity(product.id, quantity - 1)}
-                        className="w-7 h-7 flex items-center justify-center bg-ash-brown-100 text-ash-brown-800 rounded-md hover:bg-ash-brown-200 text-xs font-bold transition-colors"
+                        className="w-7 h-7 flex items-center justify-center cursor-pointer bg-ash-brown-100 text-ash-brown-800 rounded-md hover:bg-ash-brown-200 text-xs font-bold transition-colors"
                         aria-label={`Decrease quantity of ${product.name}`}
                       >
                         -
@@ -111,7 +111,7 @@ const SidebarCart: React.FC = () => {
                       </span>
                       <button
                         onClick={() => updateQuantity(product.id, quantity + 1)}
-                        className="w-7 h-7 flex items-center justify-center bg-ash-brown-100 text-ash-brown-800 rounded-md hover:bg-ash-brown-200 text-xs font-bold transition-colors"
+                        className="w-7 h-7 flex items-center justify-center cursor-pointer bg-ash-brown-100 text-ash-brown-800 rounded-md hover:bg-ash-brown-200 text-xs font-bold transition-colors"
                         aria-label={`Increase quantity of ${product.name}`}
                       >
                         +
@@ -126,7 +126,7 @@ const SidebarCart: React.FC = () => {
                     </p>
                     <button
                       onClick={() => removeFromCart(product.id)}
-                      className="text-red-600 hover:text-red-800 text-xs font-semibold underline mt-3 transition-colors"
+                      className="text-red-600 hover:text-red-800 text-xs cursor-pointer font-semibold underline mt-3 transition-colors"
                       aria-label={`Remove ${product.name} from cart`}
                     >
                       Remove

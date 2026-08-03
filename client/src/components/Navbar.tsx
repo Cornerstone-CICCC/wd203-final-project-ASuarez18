@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
               {/* > Sidebar Button */}
               <button
                 onClick={toggleSidebar}
-                className="relative p-2 rounded-lg bg-ash-brown-900 border border-ash-brown-700 text-ash-brown-100 hover:bg-ash-brown-800 hover:text-cool-sky-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cool-sky-400"
+                className="relative p-2 rounded-lg bg-ash-brown-900 cursor-pointer border border-ash-brown-700 text-ash-brown-100 hover:bg-ash-brown-800 hover:text-cool-sky-300 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cool-sky-400"
                 aria-label="Open cart overview"
               >
                 <svg

@@ -141,7 +141,7 @@ export const ItemDetail: React.FC = () => {
                 <button
                   onClick={handleDecreaseQuantity}
                   disabled={quantity <= 1}
-                  className="w-9 h-9 flex items-center justify-center bg-white text-ash-brown-900 rounded-lg hover:bg-ash-brown-200 disabled:opacity-40 disabled:cursor-not-allowed font-bold transition-colors shadow-xs"
+                  className="w-9 h-9 flex items-center justify-center cursor-pointer bg-white text-ash-brown-900 rounded-lg hover:bg-ash-brown-200 disabled:opacity-40 disabled:cursor-not-allowed font-bold transition-colors shadow-xs"
                   aria-label="Decrease quantity"
                 >
                   -
@@ -151,7 +151,7 @@ export const ItemDetail: React.FC = () => {
                 </span>
                 <button
                   onClick={handleIncreaseQuantity}
-                  className="w-9 h-9 flex items-center justify-center bg-white text-ash-brown-900 rounded-lg hover:bg-ash-brown-200 font-bold transition-colors shadow-xs"
+                  className="w-9 h-9 flex items-center justify-center cursor-pointer bg-white text-ash-brown-900 rounded-lg hover:bg-ash-brown-200 font-bold transition-colors shadow-xs"
                   aria-label="Increase quantity"
                 >
                   +
@@ -170,7 +170,7 @@ export const ItemDetail: React.FC = () => {
 
               <button
                 onClick={handleAddToCart}
-                className="w-full py-3.5 px-6 bg-cool-sky-600 text-white font-bold text-sm sm:text-base rounded-xl hover:bg-cool-sky-700 transition-all duration-200 shadow-md flex items-center justify-center gap-2 group"
+                className="w-full py-3.5 px-6 cursor-pointer bg-cool-sky-600 text-white cursor-pointer font-bold text-sm sm:text-base rounded-xl hover:bg-cool-sky-700 transition-all duration-200 shadow-md flex items-center justify-center gap-2 group"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
