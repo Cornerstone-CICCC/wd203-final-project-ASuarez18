@@ -8,9 +8,7 @@ import { router } from "./router/router.tsx";
 import { CartProvider } from "./context/CartContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  // <StrictMode>
   <CartProvider>
     <RouterProvider router={router} />
   </CartProvider>,
-  // </StrictMode>
 );

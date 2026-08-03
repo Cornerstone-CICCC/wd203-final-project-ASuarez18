@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import useProducts from "../hooks/useProducts";
 import ProductCard from "../components/ProductCard";
