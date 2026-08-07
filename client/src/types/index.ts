@@ -55,3 +55,15 @@ export interface CartContextType {
   toggleSidebar: () => void;
   setIsSidebarOpen: (isOpen: boolean) => void;
 }
+
+/**
+ * @type {FavoritesContextType}
+ * @desc Context type for managing the favorites state and operations
+ */
+export interface FavoritesContextType {
+  favorites: Product[];
+  toggleFavorite: (product: Product) => void;
+  isFavorite: (productId: number) => boolean;
+  clearFavorites: () => void;
+  totalFavorites: number;
+}

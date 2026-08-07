@@ -7,6 +7,7 @@ import CartPage from "../pages/CartPage";
 import Checkout from "../pages/Checkout";
 import NotFound from "../pages/NotFound";
 import ErrorPage from "../pages/ErrorPage";
+import { FavoritesPage } from "../pages/FavoritesPage";
 
 
 export const router = createBrowserRouter([
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
       { path: "items/:id", element: <ItemDetail /> },
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <Checkout /> },
+      { path: "favorites", element: <FavoritesPage /> },
       { path: "*", element: <NotFound /> },
     ],
   },

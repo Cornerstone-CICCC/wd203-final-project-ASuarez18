@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import type { Product } from "../types";
 import { useCart } from "../context/CartContext";
+import FavoriteButton from "./FavoriteButton";
 
 interface ProductCardProps {
   product: Product;
@@ -9,11 +10,6 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { addToCart, toggleSidebar } = useCart();
 
-  /**
-   * @function handleAddToCart
-   * @desc Handles adding a product to the cart and toggling the sidebar
-   * @param {React.MouseEvent} e - The click event
-   */
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -22,9 +18,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="group bg-white rounded-2xl shadow-xs border border-ash-brown-200 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:border-ash-brown-300">
+    <div className="group bg-white rounded-2xl shadow-xs border border-ash-brown-200 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:border-ash-brown-300 relative">
       {/* > Link area to product detail */}
-      <Link to={`/items/${product.id}`} className="block overflow-hidden relative">
+      <Link
+        to={`/items/${product.id}`}
+        className="block overflow-hidden relative"
+      >
         <div className="aspect-4/3 w-full bg-ash-brown-100 overflow-hidden relative">
           <img
             src={product.photo}
@@ -32,7 +31,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-ash-brown-950/10 group-hover:bg-transparent transition-colors duration-300" />
+          {/* > Favorite Btn */}
+          <div className="absolute top-2 right-2 z-10">
+            <FavoriteButton product={product} />
+          </div>
         </div>
 
         <div className="p-4 space-y-2">
@@ -54,23 +56,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="p-4 pt-0">
         <button
           onClick={handleAddToCart}
-          className="w-full py-2.5 px-4 bg-ash-brown-900 cursor-pointer text-ash-brown-50 rounded-xl text-xs sm:text-sm font-semibold hover:bg-cool-sky-600 hover:text-white transition-all duration-200 shadow-xs flex items-center justify-center gap-2 group/btn"
-          aria-label={`Add ${product.name} to cart`}
+          className="w-full py-2.5 px-4 bg-ash-brown-900 text-ash-brown-50 rounded-xl text-xs sm:text-sm font-semibold hover:bg-cool-sky-600 hover:text-white transition-all duration-200 shadow-xs flex items-center justify-center gap-2 group/btn"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4 transition-transform group-hover/btn:scale-110"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 4v16m8-8H4"
-            />
-          </svg>
           Add to Order
         </button>
       </div>

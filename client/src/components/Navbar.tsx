@@ -52,6 +52,9 @@ const Navbar: React.FC = () => {
               <NavLink to="/cart" className={getNavLinkClass}>
                 Cart
               </NavLink>
+              <NavLink to="/favorites" className={getNavLinkClass}>
+                Favorites
+              </NavLink>
             </nav>
 
             <div className="flex items-center gap-2">
@@ -139,6 +142,13 @@ const Navbar: React.FC = () => {
               className={getNavLinkClass}
             >
               Cart
+            </NavLink>
+            <NavLink
+              to="/favorites"
+              onClick={closeMobileMenu}
+              className={getNavLinkClass}
+            >
+              Favorites
             </NavLink>
           </nav>
         )}

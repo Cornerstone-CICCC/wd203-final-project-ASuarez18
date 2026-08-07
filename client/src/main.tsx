@@ -2,13 +2,15 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router";
-
-// Router
-import { router } from "./router/router.tsx";
 import { CartProvider } from "./context/CartContext.tsx";
+import { FavoritesProvider } from "./context/FavoritesContext.tsx";
+
+import { router } from "./router/router.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <CartProvider>
-    <RouterProvider router={router} />
+    <FavoritesProvider>
+      <RouterProvider router={router} />
+    </FavoritesProvider>
   </CartProvider>,
 );
